@@ -87,7 +87,13 @@ let private builtins = [
     
     "regtype", typeof<UInt32>
     "regclass", typeof<UInt32>
-    //"range", typeof<NpgsqlRange>, NpgsqlDbType.Range)
+
+    "tsrange", typeof<NpgsqlRange<DateTime>>
+    "tstzrange", typeof<NpgsqlRange<DateTime>>
+    "daterange", typeof<NpgsqlRange<DateTime>>
+    "int4range", typeof<NpgsqlRange<int32>>
+    "int8range", typeof<NpgsqlRange<int64>>
+    "numrange", typeof<NpgsqlRange<decimal>>
 ]
 
 let mutable private spatialTypesMapping = [
